@@ -1,0 +1,70 @@
+{
+  "agent_name": "Knowledge Search Agent",
+  "agent_id": "697d037ad36f070193f5c6c3",
+  "agent_purpose": "research",
+  "description": "Research agent that performs semantic search across PDF documents and provides answers with source citations",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "answer": "string",
+      "sources": [
+        {
+          "document": "string",
+          "page": "string",
+          "excerpt": "string"
+        }
+      ],
+      "confidence": "number",
+      "retrieved_passages": "number",
+      "query_interpretation": "string"
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "answer": "The retrieved documents do not contain direct, comprehensive analysis or summary of climate change mitigation strategies. As such, no specific key findings related to approaches for mitigating climate change\u2014such as renewable energy adoption, carbon pricing, energy efficiency, or policy measures\u2014are discussed in the available sources. The covered material largely focuses on topics unrelated to climate change mitigation, such as email services, security, and related policies. For thorough and evidence-based key findings on climate change mitigation strategies, it would be necessary to consult specialized scientific reports or documents dedicated to climate and environmental studies.",
+      "sources": [
+        {
+          "document": "Gmail Program Policies - Gmail Help",
+          "page": "Not specified",
+          "excerpt": "The documents reviewed focus on program policies, email features, and organizational testimonials but do not address climate change or environmental issues."
+        }
+      ],
+      "confidence": 0.7,
+      "retrieved_passages": 5,
+      "query_interpretation": "The user requested a summary of key findings about climate change mitigation strategies. The knowledge base was searched for climate and mitigation-related content, but none was found."
+    },
+    "metadata": {
+      "agent_name": "Knowledge Search Agent",
+      "timestamp": "2026-01-30T12:00:00Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-30T19:17:18.171224",
+  "test_message_used": "Research a sample topic for testing",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "answer": "The retrieved documents do not contain direct, comprehensive analysis or summary of climate change mitigation strategies. As such, no specific key findings related to approaches for mitigating climate change\u2014such as renewable energy adoption, carbon pricing, energy efficiency, or policy measures\u2014are discussed in the available sources. The covered material largely focuses on topics unrelated to climate change mitigation, such as email services, security, and related policies. For thorough and evidence-based key findings on climate change mitigation strategies, it would be necessary to consult specialized scientific reports or documents dedicated to climate and environmental studies.",
+      "sources": [
+        {
+          "document": "Gmail Program Policies - Gmail Help",
+          "page": "Not specified",
+          "excerpt": "The documents reviewed focus on program policies, email features, and organizational testimonials but do not address climate change or environmental issues."
+        }
+      ],
+      "confidence": 0.7,
+      "retrieved_passages": 5,
+      "query_interpretation": "The user requested a summary of key findings about climate change mitigation strategies. The knowledge base was searched for climate and mitigation-related content, but none was found."
+    },
+    "metadata": {
+      "agent_name": "Knowledge Search Agent",
+      "timestamp": "2026-01-30T12:00:00Z"
+    }
+  },
+  "test_passed": true
+}

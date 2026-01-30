@@ -1,0 +1,73 @@
+{
+  "workflow_name": "Knowledge Search Assistant",
+  "workflow_type": "single_agent",
+  "nodes": [
+    {
+      "id": "user_input",
+      "type": "Input",
+      "label": "User Query",
+      "nodeCategory": "input",
+      "position": {
+        "x": 100,
+        "y": 200
+      }
+    },
+    {
+      "id": "knowledge_search_agent",
+      "type": "Agent",
+      "label": "Knowledge Search Agent",
+      "nodeCategory": "agent",
+      "agent_id": "697d037ad36f070193f5c6c3",
+      "agent_name": "Knowledge Search Agent",
+      "position": {
+        "x": 400,
+        "y": 200
+      }
+    },
+    {
+      "id": "search_results",
+      "type": "Output",
+      "label": "Search Results with Citations",
+      "nodeCategory": "end",
+      "position": {
+        "x": 700,
+        "y": 200
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "user_input",
+      "target": "knowledge_search_agent"
+    },
+    {
+      "source": "knowledge_search_agent",
+      "target": "search_results"
+    }
+  ],
+  "agents": [
+    {
+      "agent_id": "697d037ad36f070193f5c6c3",
+      "agent_name": "Knowledge Search Agent",
+      "agent_type": "single",
+      "description": "Performs semantic search across uploaded PDF documents, synthesizes comprehensive answers from retrieved content, and provides source citations with page references for verification",
+      "provider": "OpenAI",
+      "model": "gpt-4.1",
+      "temperature": 0.3,
+      "top_p": 1,
+      "has_knowledge_base": true,
+      "rag_id": "697d0367fd1daac38e53c174",
+      "rag_name": "knowledgesearchkbru1x",
+      "trigger": "Search button or Enter key in Chat Interface"
+    }
+  ],
+  "knowledge_bases": [
+    {
+      "rag_id": "697d0367fd1daac38e53c174",
+      "rag_name": "knowledgesearchkbru1x",
+      "name": "Knowledge Search KB",
+      "description": "Knowledge base for PDF document storage and semantic search",
+      "used_by_agents": ["697d037ad36f070193f5c6c3"]
+    }
+  ]
+}
