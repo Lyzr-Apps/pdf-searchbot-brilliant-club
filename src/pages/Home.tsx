@@ -411,7 +411,7 @@ export default function Home() {
               <div className="w-8 h-8 bg-[#4361ee] rounded-lg flex items-center justify-center">
                 <BookOpen className="h-5 w-5 text-white" />
               </div>
-              <h1 className="text-xl font-bold text-[#1a1a2e]">Knowledge Search</h1>
+              <h1 className="text-xl font-bold text-[#1a1a2e]">hello world</h1>
             </div>
             <Button variant="ghost" size="sm" className="h-9 w-9 p-0">
               <Settings className="h-5 w-5 text-gray-600" />
